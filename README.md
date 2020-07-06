@@ -11,6 +11,14 @@ Therefore, what we do is to use a calibration plate to solve the problem of AX=X
 
 2. catkin_make all the packages
 
+# Preparation of calibration plate (Here i have uploaded the prepared data: that is calibblockthird.obj in our package)
+One way to get the point clouds of calibration plate is sampling using pcl tools: "pcl_mesh_sampling"
+
+Then you should move the coordinate system of the calibration plate in the center of the bottom like this, otherwise the pose estimation algorithm may be wrong:
+
+![imageca](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/coord.png)
+
+
 # Calibration in simulation data 
 
 1.roslaunch easy_handeye_demo calibrate.launch
