@@ -11,6 +11,33 @@ Therefore, what we do is to use a calibration plate to solve the problem of AX=X
 
 2. catkin_make all the packages
 
+# Calibration in simulation data 
+
+3.roslaunch easy_handeye_demo calibrate.launch
+
+# Calibration in real data and real robot( Here we takes UR5):
+
+First, you should launch ur5:
+
+1.roslaunch ur_modern_driver ur5_bringup.launch robot_ip:=192.168.1.102 [reverse_port:=REVERSE_PORT]
+
+2.roslaunch ur5_moveit_config ur5_moveit_planning_execution.launch
+
+3.roslaunch ur5_moveit_config moveit_rviz.launch config:=true
+
+Then you should launch calibration algorithms:
+
+1.roslaunch aruco_ros multi.launch
+
+2.roslaunch realsense2_camera rs_camera.launch filters:=pointcloud align_depth:=true
+
+3.rosrun 3dposedetection calibration
+
+4.roslaunch easy_handeye_demo calibrate_real.launch
+
+(For 3 and 4, each time you want take a sample, you should launch "rosrun 3dposedetection calibration",and take a sample; About 30 samples will get a good calibration result)
+
+
 # Performance
 
 Here is the performance, the calibration error is with 1~2mm
