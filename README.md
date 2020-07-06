@@ -13,7 +13,7 @@ Therefore, what we do is to use a calibration plate to solve the problem of AX=X
 
 # Calibration in simulation data 
 
-3.roslaunch easy_handeye_demo calibrate.launch
+1.roslaunch easy_handeye_demo calibrate.launch
 
 # Calibration in real data and real robot( Here we takes UR5):
 
