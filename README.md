@@ -24,7 +24,7 @@ Then you should move the coordinate system of the calibration plate in the cente
 
 1.roslaunch easy_handeye_demo calibrate.launch
 
-# Calibration in real data and real robot( Here we takes UR5):
+# Calibration in real data and real robot(Here we take UR5):
 
 Firstly, you should launch ur5:
 
