@@ -4,3 +4,6 @@ Usually, we often use qr code using rgb image to do the calibration. (such as ea
 However, if we use a depth camera, the method above includes many errors, such as intrinsic errors or extrinsic error between depth camera and rgb camera.
 Therefore, what we do is to use a calibration plate to solve the problem of AX=XB
 
+
+# handeye_calibration_with_depth_camera
+
