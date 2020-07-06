@@ -48,7 +48,7 @@ Then you should launch calibration algorithms:
 
 # Performance
 
-Here is the performance, the calibration error is with 1~2mm
+Here is the performance, the calibration error is with 1~2mm using realsense sr300
 
 ![image1](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/Screenshot%20from%202020-07-06%2015-08-03.png)
 
