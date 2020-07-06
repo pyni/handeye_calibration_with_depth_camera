@@ -7,6 +7,8 @@ Therefore, what we do is to use a calibration plate to solve the problem of AX=X
 
 # Performance
 
+Here is the performance, the calibration error is with 2mm
+
 ![image1](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/Screenshot%20from%202020-07-06%2015-08-03.png)
 
 ![image2](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/Screenshot%20from%202020-07-06%2015-08-04.png)
