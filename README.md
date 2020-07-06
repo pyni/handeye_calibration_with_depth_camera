@@ -6,7 +6,10 @@ Therefore, what we do is to use a calibration plate to solve the problem of AX=X
 ![image](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/block.png)
 
 # Performance
+
 ![image1](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/Screenshot%20from%202020-07-06%2015-08-03.png)
+
 ![image2](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/Screenshot%20from%202020-07-06%2015-08-04.png)
+
 ![image3](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/Screenshot%20from%202020-07-06%2015-08-06.png)
 
