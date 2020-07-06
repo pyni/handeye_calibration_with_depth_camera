@@ -7,7 +7,7 @@ Therefore, what we do is to use a calibration plate to solve the problem of AX=X
 
 # Install (Ubuntu 18.04+ROS melodic)
 
-1.please install easy_handeye (https://github.com/IFL-CAMP/easy_handeye.git), realsense_ros(https://github.com/IntelRealSense/realsense-ros/),in the same src of our packages (Here we also use OpenGR https://storm-irit.github.io/OpenGR/ )
+1.please install easy_handeye (https://github.com/IFL-CAMP/easy_handeye.git), realsense_ros(https://github.com/IntelRealSense/realsense-ros/),in the same src of our packages (Here we also use OpenGR https://storm-irit.github.io/OpenGR/ and you may change the path of opengr in cmakelist of qr_code_icp )
 
 2. catkin_make all the packages
 
