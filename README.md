@@ -17,7 +17,7 @@ Therefore, what we do is to use a calibration plate to solve the problem of AX=X
 
 # Calibration in real data and real robot( Here we takes UR5):
 
-First, you should launch ur5:
+Firstly, you should launch ur5:
 
 1.roslaunch ur_modern_driver ur5_bringup.launch robot_ip:=192.168.1.102 [reverse_port:=REVERSE_PORT]
 
