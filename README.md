@@ -5,9 +5,15 @@ However, if we use a depth camera, the method above includes many errors, such a
 Therefore, what we do is to use a calibration plate to solve the problem of AX=XB
 ![image](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/block.png)
 
+# Install (Ubuntu 18.04+ROS melodic)
+
+1.please install easy_handeye (https://github.com/IFL-CAMP/easy_handeye.git), realsense_ros(https://github.com/IntelRealSense/realsense-ros/),in the same src of our packages (Here we also use OpenGR https://storm-irit.github.io/OpenGR/ )
+
+2. catkin_make all the packages
+
 # Performance
 
-Here is the performance, the calibration error is with 2mm
+Here is the performance, the calibration error is with 1~2mm
 
 ![image1](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/Screenshot%20from%202020-07-06%2015-08-03.png)
 
