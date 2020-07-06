@@ -1,0 +1,28 @@
+真实标定使用说明：
+
+1.roslaunch calibratie_real.launch
+
+2.在姿态估计的时候，每移动一步就发布以下topic即可：
+<node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="? ? ? ? ? ? ? tracking_origin tracking_marker 100" />
+
+
+如果是eye to hand 可能要调换"tracking_origin", "tracking_marker"的位置
+ 
+
+
+一些想法：
+ １）发布tf的时候，必须由父到子，同时，其中的子可以为父节点，但不能是别人的儿子！！！这点很重要（一个父亲可以有多个儿子，但一个儿子只能有一个父亲） ２）万一想发布一个子，且其已经有父节点，那么可以用下面这个方式转换一下,如: 
+step1:rosrun tf static_transform_publisher 0.0653386329514 0.0379245025646 -0.0524260354562 0.507063763331 0.497402267777 0.485803832899 0.509383902246 /ee_link /camera_depth_optical_frame0 100 
+
+step2:rosrun tf static_transformublisher 0.000, 0.000, 0.000 0.500, -0.500, 0.500, 0.500 /camera_depth_optical_frame0 /camera_link 100
+
+3)标定块标定需要注意三点： i）相机要低，即离标定块近，越近，相机本身误差越小 ii）标定块最好不要用stl模型采样生成，可以直接用相机扫描的点云，然后用meshlab剪切，去平面，最后那这部分点云进行匹配 iii）标定块要三面匹配，仅仅两面仍然有误差　的可能
+
+1.roslaunch ur_modern_driver ur5_bringup.launch robot_ip:=192.168.1.102 [reverse_port:=REVERSE_PORT]
+2.roslaunch ur5_moveit_config ur5_moveit_planning_execution.launch
+3.roslaunch ur5_moveit_config moveit_rviz.launch config:=true.
+
+roslaunch realsense2_camera rs_camera.launch filters:=pointcloud align_depth:=true
+
+
+ 

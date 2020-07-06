@@ -1,0 +1,37 @@
+<launch>
+    <!-- you can write your own calibrate.launch, by including the ROS drivers for robot and tracking and choosing
+    your own namespace if you have multiple tracking devices or robots -->
+
+    <arg name="start_simulator" default="true" doc="Start a simulated tracking system with a trivial noise model" />
+
+    <arg name="namespace_prefix" default="demo_handeyecalibration" />
+    <arg name="eye_on_hand" default="true" />
+
+    <arg name="robot_base_frame" value="base_link" />
+    <arg name="robot_effector_frame" value="ee_link" />
+    <arg name="tracking_base_frame" value="tracking_origin" />
+    <arg name="tracking_marker_frame" value="tracking_marker" />
+
+    <!-- start the robot -->
+ 　
+ 
+    <!-- start easy_handeye calibration procedure -->
+    <include ns="/ur5" file="$(find easy_handeye)/launch/calibrate.launch" >
+        <arg name="start_rviz" value="false" />
+
+        <arg name="namespace_prefix" value="$(arg namespace_prefix)" />
+        <arg name="eye_on_hand" value="$(arg eye_on_hand)" />
+        <arg name="publish_dummy" value="false" /> <!-- in our case it is done by the tracking simulator -->
+
+        <arg name="tracking_base_frame" value="$(arg tracking_base_frame)" />
+        <arg name="tracking_marker_frame" value="$(arg tracking_marker_frame)" />
+        <arg name="robot_base_frame" value="$(arg robot_base_frame)" />
+        <arg name="robot_effector_frame" value="$(arg robot_effector_frame)" />
+
+        <arg name="freehand_robot_movement" value="false" />
+        <arg name="robot_velocity_scaling" value="0.5" />
+        <arg name="robot_acceleration_scaling" value="0.2" />
+    </include>
+
+ 
+</launch>
