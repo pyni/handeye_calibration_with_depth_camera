@@ -5,6 +5,8 @@ However, if we use a depth camera, the method above includes many errors, such a
 Therefore, what we do is to use a calibration plate to solve the problem of AX=XB
 ![image](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/block.png)
 
+To use our package, you should do a 3D printing for the calibration plate and please paste four QR codes on it (These files are listed in the "prepareddata" directory).
+
 # Install (Ubuntu 18.04+ROS melodic)
 
 1.please install easy_handeye (https://github.com/IFL-CAMP/easy_handeye.git), realsense_ros(https://github.com/IntelRealSense/realsense-ros/),in the same src of our packages (Here we also use OpenGR https://storm-irit.github.io/OpenGR/ and you may change the path of opengr in cmakelist of qr_code_icp )
