@@ -59,3 +59,7 @@ Here is the performance, the calibration error is with 1~2mm using realsense sr3
 
 ![image3](https://github.com/pyni/handeye_calibration_with_depth_camera/blob/master/figure/Screenshot%20from%202020-07-06%2015-08-06.png)
 
+
+# How to improve the accuracy:
+
+
